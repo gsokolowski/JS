@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>slideDown demo</title>
+    <style>
+        .slideLeft {
+            float: left;
+            height:350px;
+        }
+        .slideLeft {
+            width:25%;
+            z-index:2;
+            position:absolute;
+            left:-1000px;
+            background:#f90;
+            color:#000;
+        }
+
+        .leftMenu {
+            display: none;
+        }
+    </style>
+    <script src="vendor/jquery/jquery.js"></script>
+</head>
+<body>
+
+<div class="leftMenu">Here I am !</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
+<a href="#" class="jqueryButton">Show/hide Slide Panel</a>
+
+<script>
+    $(document).ready(function(){
+        $('.jqueryButton').click(function(){
+            $(".leftMenu").addClass("slideLeft");
+            var hidden = $('.slideLeft');
+            if (hidden.hasClass('visible')){
+                hidden.animate({"left":"-1000px"}, "slow").removeClass('visible');
+            } else {
+                $('.leftMenu').css('display','block');
+                hidden.animate({"left":"0px"}, "slow").addClass('visible');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

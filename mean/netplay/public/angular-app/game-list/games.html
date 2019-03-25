@@ -1,0 +1,40 @@
+<h1>{{ vm.title }}</h1>
+
+Tu se mozesz pisac co chcesz
+<!-- ul>
+    <li ng-repeat="game in vm.games"> {{ game.FIELD1 }} {{ game.FIELD2 }} {{ game.FIELD3 }}  {{ game.FIELD4 }} </li>
+</ul -->
+
+<div>
+    <ul class="nav nav-tabs">
+        <li ng-class="{ active: main.active.tab == 'all' }">
+            <a href="#/">Allddd</a>
+        </li>
+        <li ng-class="{ active: main.active.tab == 'slots' }">
+            <a href="#/">Slots</a>
+        </li>
+        <li ng-class="{ active: main.active.tab == 'roulette' }">
+            <a href="#/">Roulette</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div ng-switch='main.active.tab'>
+            <div ng-switch-when='main.active.tab' ng-include='all.html'></div>
+        </div>
+        <div ng-switch='main.active.tab'>
+            <div ng-switch-when='main.active.tab' ng-include='all.html'></div>
+        </div>
+        <div ng-switch='main.active.tab'>
+            <div ng-switch-when='main.active.tab' ng-include='all.html'></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+

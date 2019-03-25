@@ -1,0 +1,77 @@
+<head>
+
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css"/>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+<style>
+.lightBox{
+	width: 100%;
+	height: 800px;
+	background-color: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	left:0;
+}
+
+.modal > div:not(.lightBox), .modal > img, .modal > iframe{
+	position: fixed;
+	top: 10%;
+	left: 40%;
+	z-index: 1050;
+	max-width: 80%;
+
+}
+
+.hidden{
+	display:none;
+}
+
+.modal {
+	position:absolute;
+}
+
+#testDiv{
+	width:50%;
+	background:white;
+	padding:1em;
+}
+
+.modal img{width:100%;}
+
+</style>
+</head>
+<body>
+<section>
+<h1>The Responsive Javascript LightBox</h1>
+
+<p>This was a quick 2-hour project to teach myself a little bit more javascript. There are numerous lightboxes around, but I wanted to code my own for fun.</p>
+
+<p>The lightbox works quite simply. Here's how to launch it:</p>
+<ul>
+	<li>It's launched with a &#60;button&#62; element. Give it any class you like, and any id you like. In this example, we'll give it '#THIS'.</li>
+	<li>Create a div with the classes "hidden modal" (see the css in the source to see what these classes do)</li>
+	<li>The new div should also have the same #id as your button, with "-modal" on the end. So in our example, the div's id is '#THIS-modal'</li>
+	<li>Put whatever you like in the div. An image, another div, an iframe, a gallery, should all work fine.</li>	
+</ul>	
+
+<p>When you launch the lightbox, the script tests the document.body's window size as well as the lightbox div's size and positions it in the centre of the document. I've used percentage ratios, so you can resize the window and the div stays in the middle.</p>
+
+<p>That's about it! Here's two examples</p>
+
+	<button class="btn btn-primary" id="THIS">Launch an Image</button>
+	<div class="hidden modal" id="THIS-modal">
+		<img src="img/1.jpg" alt="image" />
+	</div>
+	<button class="btn btn-secondary" id="THIS2">Launch a Modal</button>
+	<div class="hidden modal" id="THIS2-modal">
+		<div id="testDiv">
+			<h1>Hello! This is a lightbox!</h1>
+			<p>If you're reading this, it means that I am dead, and my computer killed me. If you're accessing this from my computer, walk away slowly. It knows how to do...<em>things</em>. Deadly things. You have been warned.</p> 
+			<img src="img/1.jpg" alt="image" />
+		</div>
+	</div>
+</section>
+
+<script src="lightbox.js"></script>
+</body>

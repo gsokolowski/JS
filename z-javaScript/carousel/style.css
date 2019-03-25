@@ -1,0 +1,188 @@
+.v2Carousel {
+    width: 940px;
+    float: left;
+    clear: both;
+}
+
+.v2Carousel ul.mainImages {
+    width: 940px;
+    float: left;
+    position: relative;
+    clear: both;
+}
+
+.v2Carousel ul.mainImages li {
+    width: 940px;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    float: left;
+    clear: both;
+}
+
+.v2Carousel ul.mainImages li:first-child {
+    position: relative;
+}
+
+.v2Carousel.initialised ul.mainImages li:first-child {
+    position: absolute;
+}
+
+.v2Carousel ul.mainImages li a {
+    width: 940px;
+    overflow: hidden;
+    display: block;
+    cursor: default;
+}
+
+.v2Carousel ul.mainImages li a img {
+    display: block;
+}
+
+.thumbnailBackground {
+    width: 210px;
+    height: 140px;
+    background-color: #666;
+}
+
+.v2Carousel.trans ul.mainImages li {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.v2Carousel ul.mainImages li {
+    z-index: 0;
+}
+
+.v2Carousel ul.mainImages li.active, .v2Carousel ul.mainImages li.active2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    z-index: 1;
+}
+
+.thumbnails {
+    float: left;
+    top: 10px;
+    margin-top: 20px;
+}
+
+.v2Carousel ul.thumbnails li {
+    width: 210px;
+    height: 250px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.triangle-up {
+    position: absolute;
+    left: 96px;
+    bottom: 150px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ccc;
+}
+
+.v2Carousel ul.thumbnails li .pointerGroup {
+    position: absolute;
+    background-color: #666;
+    width: 210px;
+    height: 150px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 1;
+}
+
+.v2Carousel.trans ul.thumbnails li .pointerGroup {
+    top: 10px
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    -webkit-backface-visibility: hidden;
+}
+
+.v2Carousel ul.thumbnails li.active .pointerGroup {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.v2Carousel ul.thumbnails li .pointerGroup .wrap {
+    width: 210px;
+    height: 150px;
+}
+
+.v2Carousel ul.thumbnails li .pointerGroup .wrap h2 {
+    color: #FFF;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 20px;
+    font-family: AlternateGothic, Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.v2Carousel ul.thumbnails li .pointerGroup .wrap .timestamp {
+    color: #FFF;
+    text-align: center;
+    font-family: AlternateGothic, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.v2Carousel ul.thumbnails li .text {
+    width: 210px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.v2Carousel ul.thumbnails li .text p {
+    padding: 5px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.v2Carousel ul.thumbnails li .text p a {
+    color: #333;
+    text-decoration: none;
+    line-height: 22px;
+    font-size: 16px;
+}
+
+.v2Carousel ul.thumbnails li img {
+    display: block;
+    position: absolute;
+    top: 10px;
+}
+
+.v2Carousel .customHtml {
+    width: 300px;
+    height: 166px;
+    float: left;
+    margin-top: 10px;
+}
+
+#full-width-wrapper {
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#homePageBleedEfectCarousel {
+    width: 980px;
+}
+
+#homePageBleedEfectCarousel .v2Carousel {
+    width: 980px;
+}
+
+#homePageBleedEfectCarousel .thumbnails {
+    padding: 0 0 0 20px;
+}
+

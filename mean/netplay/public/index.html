@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="meanhotel">
+<head>
+  <title>NetPlay</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/custom.css" rel="stylesheet"/>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+  <div>
+    <div class="container">
+      <h2>Netplay Games</h2>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#all">All Games</a></li>
+        <li><a data-toggle="tab" href="#slots">Slots</a></li>
+        <li><a data-toggle="tab" href="#blackjack">Blackjack</a></li>
+        <li><a data-toggle="tab" href="#jackpots">Jackpots</a></li>
+        <li><a data-toggle="tab" href="#popular">Popular Games</a></li>
+        <li><a data-toggle="tab" href="#search_result"><input type="text" id="search_box"></a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="all" class="tab-pane fade in active">
+            <h3>All games</h3>
+            <div id="allgames"></div>
+        </div>
+        <div id="slots" class="tab-pane fade">
+            <h3>Slots</h3>
+            <div id="slotgames"></div>
+        </div>
+        <div id="blackjack" class="tab-pane fade">
+            <h3>Blackjack</h3>
+            <div id="blackjackgames"></div>
+        </div>
+        <div id="jackpots" class="tab-pane fade">
+            <h3>Jackpots</h3>
+            <div id="jackpotgames"></div>
+        </div>
+          <div id="popular" class="tab-pane fade">
+              <h3>All games</h3>
+              <div id="populargames"></div>
+          </div>
+          <div id="search_result" class="tab-pane fade"></div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+    $(document).ready( function() {
+
+        GAMES.getData(39,'#populargames');
+        GAMES.getData(79,'#allgames');
+        GAMES.getData(3,'#slotgames');
+        GAMES.getData(4,'#jackpotgames');
+        GAMES.getData(2,'#blackjackgames');
+        GAMES.searchData();
+    });
+</script>
+
+</body>
+</html>

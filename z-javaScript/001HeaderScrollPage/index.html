@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            text-align: center;
+        }
+        #pagetop {
+            position: fixed; /*menu is fixed and other div goes below this this when scrolling*/
+            top: 0px;
+            width: 100%;
+            height: 120px;
+            background: #06C;
+            color: #fff;
+            font-size: 23px;
+            padding-top: 50px;
+            transition: height 0.3s linear 0s, padding 0.3s linear 0s;
+            overflow: hidden;
+        }
+        #pagetop > #menu { /* meny is a child div iside pagetop*/
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            background: #004a95;
+            height: 50px;
+            transition: height 0.3s linear 0s;
+        }
+        #wrapper {
+            margin-top:230px;
+        }
+    </style>
+</head>
+<body>
+<div id="pagetop">
+    Header
+    <div id="menu">Menu system here</div>
+</div>
+<div id="wrapper">
+    <script>
+        for(var i=0; i<50; i++){
+            document.write("<h2>" + (i+1)+" Dummy page content ....</h2>");
+        }
+        var pagetop,
+            menu,
+            yPos; //represent position where the user scrolled down the page
+
+        function scrollMe() {
+            pagetop = document.getElementById('pagetop');
+            menu = document.getElementById('menu');
+            yPos = window.pageYOffset; // gets the pixels that user scrolled down the page
+            if(yPos > 150){
+                //
+                pagetop.style.height = "36px";
+                pagetop.style.paddingTop = "8px";
+                menu.style.height = "0px";
+            }else{
+                //default set up
+                pagetop.style.height = "120px";
+                pagetop.style.paddingTop = "50px";
+                menu.style.height = "50px";
+            }
+        }
+        window.addEventListener("scroll", scrollMe); // event scroll will call function yScroll
+
+    </script>
+</div>
+</body>
+</html>

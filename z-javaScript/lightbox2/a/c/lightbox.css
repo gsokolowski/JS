@@ -1,0 +1,16 @@
+/* lightbox css */
+.body_lock { overflow: hidden; }
+[class*=_lb] { width: 960px; margin: 0px auto; }
+[class*=_lb] img { width: 250px; height: 188px; border: 2px solid orange; float: left; margin: 28px; padding: 0; cursor: pointer; }
+.lb_ol { background: rgba(100,100,100, .4); position: absolute; width: 100%; height: 100%; z-index: 10000; padding: 0; margin: 0; display: none; }
+.lb { width: 960px; height: 450px; z-index: 10001; background: #fff; margin: 50px auto; }
+.lb .close { height: 25px; width: 25px; background: url(../i/close.gif) 0 0 no-repeat; position: relative; z-index: 10002; top: 5px; left: 930px; cursor: pointer; }
+.lb .stage { width: 900px; height: 300px; background: #000; margin: 15px auto; }
+.lb .stage img { height: 300px; width: 534px; margin: 0px auto; display: block; }
+.lb .carousel { width: 900px; height: 80px; background: orange; margin: 0px auto; }
+.lb .carousel .left { background: url(../i/left.png) 0 0 no-repeat; float: left; display: block; width: 20px; height: 20px; margin: 30px 10px; cursor: pointer; }
+.lb .carousel .right { background: url(../i/right.png) 0 0 no-repeat; float: right; display: block; width: 20px; height: 20px; margin: 30px 10px; cursor: pointer; }
+.lb .carousel .inner { overflow: hidden; background: #000; margin: 5px 40px; padding: 5px; width: 810px; height: 60px; position: absolute; }
+.lb .carousel .inner .slider { width: auto; height: 60px; position: relative;  left: 0px; }
+.lb .carousel .inner .slider .thumb { height: 58px; width: 106px; float: left; margin: 0px 5px; left: 0; cursor: pointer; }
+.lb .carousel .inner .slider .current { border: 1px solid #fff; }
