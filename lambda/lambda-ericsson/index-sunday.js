@@ -15,10 +15,6 @@ exports.handler = (event, context, callback) => {
 
     let { host, database, user, password } = process.env;
 
-    host = 'ideadrop-staging.c4vngee5eszq.eu-west-1.rds.amazonaws.com';
-    database = 'ideadrop_staging';
-    user = 'root';
-    password = 'Connect99';
 
     var knex = require('knex')({
         client: 'mysql',
